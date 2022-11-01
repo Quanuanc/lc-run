@@ -1,18 +1,31 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.quanuanc.ojcommit</id>
-    <name>oj-commit</name>
+    <name>LeetCode Run</name>
     <vendor>quanuanc</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
+    <actions>
+        <group id="LCRun.GroupedActions" class="com.github.quanuanc.lcrun.group.LeetCodeGroup"
+               text="LeetCode" description="LeetCode grouped actions"
+               popup="true" icon="com.github.quanuanc.lcrun.icons.LCRunIcons.GROUP_ICON">
+            <add-to-group group-id="EditorPopupMenu"/>
+        </group>
+
+        <action id="LCRun.GetCode"
+                class="com.github.quanuanc.lcrun.action.GetCode" text="Get Code from LeetCode"
+                description="Get code from leetcode"/>
+        <action id="LCRun.RunCode"
+                class="com.github.quanuanc.lcrun.action.RunCode" text="Run Code in LeetCode"
+                description="Run code in leetcode"/>
+        <action id="LCRun.Submit"
+                class="com.github.quanuanc.lcrun.action.Submit" text="Submit Code to LeetCode"
+                description="Submit code to leetcode"/>
+    </actions>
+
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.quanuanc.ojcommit.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.quanuanc.ojcommit.services.MyProjectService"/>
+        <notificationGroup displayType="BALLOON" id="LCRun Notification Group"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.quanuanc.ojcommit.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>

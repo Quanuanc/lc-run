@@ -1,1 +1,1 @@
-rootProject.name = "oj-commit"
+rootProject.name = "LeetCode Run"
