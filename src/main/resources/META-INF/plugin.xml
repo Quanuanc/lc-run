@@ -14,13 +14,13 @@
         </group>
 
         <action id="LCRun.GetCode"
-                class="com.github.quanuanc.lcrun.action.GetCode" text="Get Code from LeetCode"
+                class="com.github.quanuanc.lcrun.action.GetCode" text="Get Code"
                 description="Get code from leetcode"/>
         <action id="LCRun.RunCode"
-                class="com.github.quanuanc.lcrun.action.RunCode" text="Run Code in LeetCode"
+                class="com.github.quanuanc.lcrun.action.RunCode" text="Run Code"
                 description="Run code in leetcode"/>
         <action id="LCRun.Submit"
-                class="com.github.quanuanc.lcrun.action.Submit" text="Submit Code to LeetCode"
+                class="com.github.quanuanc.lcrun.action.Submit" text="Submit"
                 description="Submit code to leetcode"/>
     </actions>
 
