@@ -11,9 +11,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
-/**
- * 3sum
- */
 public class GetCode extends AnAction {
 
     @Override
